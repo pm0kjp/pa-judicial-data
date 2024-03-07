@@ -29,9 +29,9 @@ Alternately, if you're in the LiaScript version already and you want to look at 
 
 ##  About Judges in Pennsylvania
 
-Judges are **elected** in the Commonwealth of Pennsylvania in partisan elections.  They also are re-elected, or "retained", in non-partisan elections every 6 or 10 years, depending on their rank.  Appellate court and Courts of Common Pleas judges have a 10 year term, and Magisterial and Philadelphia Municipal Court judges have a 6 year term.  Read more at https://www.pacourts.us/learn/how-judges-are-elected.  
+Judges are **elected** in the Commonwealth of Pennsylvania in partisan elections.  They also are re-elected, or "retained", in non-partisan elections every 6 or 10 years, depending on their rank.  Appellate court and Courts of Common Pleas judges have a 10 year term, and Magisterial and Philadelphia Municipal Court judges have a 6 year term.  Read more at https://www.pacourts.us/learn/how-judges-are-elected .  
 
-This is not the only approach to how judges get their jobs.  In other jurisdictions, judges might be  appointed by gubernatorial, legislative, or bar selection: https://ballotpedia.org/Judicial_election_methods_by_state.
+This is not the only approach to how judges get their jobs.  In other jurisdictions, judges might be  appointed by gubernatorial, legislative, or bar selection: https://ballotpedia.org/Judicial_election_methods_by_state .
 
 The fact that we can elect our jurists is a great opportunity for voters to elect judges that reflect their values, whether that's around criminal law, business / civil law, constitutional law, etc.  However, these elections are **low-information**.  
 
@@ -57,7 +57,7 @@ I won't go into more detail here about the new judge elections, because this is 
 
 Judges have to go back on the ballot to keep their jobs in what is known as judicial retention.  These elections are non-partisan, meaning that the political party these judges originally ran under is not disclosed on the ballot.  Voters have no indication of even the basic political orientation of judges seeking retention.
 
-In Pennsylvania, we overwhelmingly retain judges (only one appellate judge has failed a retention vote in decades, not sure about other judges): https://whyy.org/articles/pennsylvania-election-2023-judicial-retention-superior-court-common-pleas/ 
+In Pennsylvania, we overwhelmingly retain judges (only one appellate judge has failed a retention vote in decades, not sure about other judges): https://whyy.org/articles/pennsylvania-election-2023-judicial-retention-superior-court-common-pleas/ .
 
 Will supplying voters with information about judges make a difference?  Yes.  By supplying voters and organizations with quantitative data about how judges act (in terms of severity, bias, focus on particular crimes, etc.), we know that we can affect electoral outcomes.  
 
@@ -179,7 +179,7 @@ However, one problem is identifying what parameters to put in your request (whic
 
 An ACLU staffer did work to download and schematize data related specifically to Philadelphia County dockets a few years ago.  This is the data we had for the JAT/RLadies hackathon. I put it up in BigQuery and made a deidentified version of the data available in .csvs for data/hackathon participants.
 
-This system of ETL from the API, however, is **not currently working** (it was a well-done, multi-system kludge by a non-developer who has moved on to bigger and better things).  My fork of this system, with updated notes indicating how far I got into trying to troubleshoot it, can be found at https://github.com/pm0kjp/padockets.  This is a private repository, so request access of Joy Payton (pm0kjp on GitHub) and I'll be happy to add you.  
+This system of ETL from the API, however, is **not currently working** (it was a well-done, multi-system kludge by a non-developer who has moved on to bigger and better things).  My fork of this system, with updated notes indicating how far I got into trying to troubleshoot it, can be found at https://github.com/pm0kjp/ .  This is a private repository, so request access of Joy Payton (pm0kjp on GitHub) and I'll be happy to add you.  
 
 One worthy endeavor could be to fix / modernize / redesign a system that would:
 
