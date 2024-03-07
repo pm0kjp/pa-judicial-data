@@ -17,17 +17,20 @@ Last updated March 7, 2024.
 
 ## About This README
 
-This is the README is written with [LiaScript](https://liascript.github.io/) rendering in mind.  LiaScript has its own a [markdown](https://en.wikipedia.org/wiki/Markdown) dialect, so you can read this in the typical markdown way (just read this in GitHub), or you can see it "pretty printed" in the LiaScript rendered format.
+This is the README is written with [LiaScript](https://liascript.github.io/) markdown rendering in mind.  LiaScript has its own [markdown](https://en.wikipedia.org/wiki/Markdown) dialect, so you can read this in the typical markdown way (just read this in GitHub), or you can see it "pretty printed" in the LiaScript rendered format.
 
 To see this document as an interactive LiaScript rendered version, click on the following link/badge:
 
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/pm0kjp/pa-judicial-data/main/README.md#1)
 
-Why view this in LiaScript?  LiaScript offers helpful tools for usability including Google Translate, text size and contrast changes, and display format options.
+Why view this in LiaScript?  LiaScript offers helpful tools for usability including pagination, Google Translate, text size and contrast changes, and display format options.  It looks a little nicer than GitHub rendered Markdown, for most users.  There are also some fun LiaScript add-ons like data visualizations.
 
 Alternately, if you're in the LiaScript version already and you want to look at the raw markdown, you can find that at [https://github.com/pm0kjp/pa-judicial-data/blob/main/README.md](https://github.com/pm0kjp/pa-judicial-data/blob/main/README.md).
 
 ##  About Judges in Pennsylvania
+
+Judges are elected: but voters don't know squat
+-----
 
 Judges are **elected** in the Commonwealth of Pennsylvania in partisan elections.  They also are re-elected, or "retained", in non-partisan elections every 6 or 10 years, depending on their rank.  Appellate court and Courts of Common Pleas judges have a 10 year term, and Magisterial and Philadelphia Municipal Court judges have a 6 year term.  Read more at [https://www.pacourts.us/learn/how-judges-are-elected](https://www.pacourts.us/learn/how-judges-are-elected).  
 
@@ -36,6 +39,9 @@ This is not the only approach to how judges get their jobs.  In other jurisdicti
 The fact that we can elect our jurists is a great opportunity for voters to elect judges that reflect their values, whether that's around criminal law, business / civil law, constitutional law, etc.  However, these elections are **low-information**.  
 
 When's the last time you heard ANYTHING about a judicial race?  Maybe you got a flyer from some judges saying they were endorsed by the Bar Association, but that generally only means "this person is adequately prepared for the job" as an attorney in good standing.  It doesn't say anything about what they stand for, their ethics, their politics, their experience or expertise, etc.
+
+Judges are important and impactful!
+-----
 
 Judges have HUGE impacts on citizens' lives, especially in criminal court.
 
@@ -55,17 +61,23 @@ I won't go into more detail here about the new judge elections, because this is 
 
 ### Judicial Retention
 
+How judges keep their jobs
+-----
+
 Judges have to go back on the ballot to keep their jobs in what is known as judicial retention.  These elections are non-partisan, meaning that the political party these judges originally ran under is not disclosed on the ballot.  Voters have no indication of even the basic political orientation of judges seeking retention.
 
 In Pennsylvania, we overwhelmingly retain judges (only one appellate judge has failed a retention vote in decades, not sure about other judges): [https://whyy.org/articles/pennsylvania-election-2023-judicial-retention-superior-court-common-pleas/](https://whyy.org/articles/pennsylvania-election-2023-judicial-retention-superior-court-common-pleas/).
 
-Will supplying voters with information about judges make a difference?  Yes.  By supplying voters and organizations with quantitative data about how judges act (in terms of severity, bias, focus on particular crimes, etc.), we know that we can affect electoral outcomes.  
+We could help voters change the judiciary!
+------
 
-For example: in 2023, Court of Common Pleas judges Ann Marie Coyle and Paula Patrick were named by Democratic Ward 1, 2, 9,15, and 39a, Reclaim Philadelphia and other progressive organizations in Philadelphia as candidates NOT recommended for retention.  
+Will supplying voters with information about judges make a difference?  **Yes.**  By supplying voters and organizations with quantitative data about how judges act (in terms of severity, bias, focus on particular crimes, etc.), we know that we can affect electoral outcomes.  
 
-Additionally, Reclaim Philadelphia recommended "No" retention votes on Superior Court judge Victor P. Stabile and Municipal Court judges Brad Moss, William A Meehan Jr., and David C. Shuter.
+For example: in 2023, Court of Common Pleas judges **Ann Marie Coyle** and **Paula Patrick** were named by Democratic Ward 1, 2, 9,15, and 39a, Reclaim Philadelphia and other progressive organizations in Philadelphia as candidates NOT recommended for retention.  
 
-These "No" recommendations were not widely known or publicized, as there were other major priorities for Philadelphia political organizations (principally, the mayoral and council races).  Still, despite this being a very quiet anti-endorsement, it made a big difference in the [judicial retention vote results](https://philadelphiaresults.azurewebsites.us/ResultsSW.aspx?type=JDR&map=CTY).  While no one failed to retain their seats, the outcomes were significantly different for judges who were targeted for non-retention.
+Additionally, Reclaim Philadelphia recommended "No" retention votes on Superior Court judge **Victor P. Stabile** and Municipal Court judges **Brad Moss**, **William A Meehan Jr.**, and **David C. Shuter**.
+
+These "No" recommendations were not widely known or publicized, as there were other major priorities for Philadelphia political organizations (principally, the mayoral and council races).  Still, despite this being a very quiet anti-endorsement, it made a noticable difference in the [judicial retention vote results](https://philadelphiaresults.azurewebsites.us/ResultsSW.aspx?type=JDR&map=CTY).  While no one failed to retain their seats, the outcomes were significantly different for judges who were targeted for non-retention.
 
 Philadelphia Court of Common Pleas retention vote for 2023:
 
@@ -95,7 +107,6 @@ Philadelphia Municipal Court Retention vote for 2023:
 || KAREN YVETTE SIMMONS | 77.98 | 22.02 | 205,780|
 || MARVIN L WILLIAMS | 75.93 | 24.07 | 199,476|
 || MATT WOLF | 78.67 | 21.33 | 209,706 |
-
 
 
 ## About the Criminal Legal System
@@ -149,9 +160,6 @@ The criminal legal system in Pennsylvania (and elsewhere) can show bias.  Things
 * A specific question raised by a Yale researcher I'm working with: "What are the determinants of somebody who gets charged with some sort of drug *distribution* (including possession with intent to distribute) versus just *possession*? As it stands right now, most decriminalization policies (including the former one in Oregon, RIP 😢) only decriminalize simple *possession* of small amounts of drugs or paraphernalia. So it really makes a difference to see, on average, if there are any determinants that make someone more likely to be charged with a distribution charge (e.g. race, use of a public defender, neighborhood of residence) rather than just possession."
 
 
-
-
-
 ## Where's the Data?
 
 We can get public information about judicial actions (sentences, bail, defendant demographics, etc.) in several ways:
@@ -165,10 +173,30 @@ We can get public information about judicial actions (sentences, bail, defendant
 
 The [Unified Judicial System of Pennyslvania (UGS)](https://ujsportal.pacourts.us/) hosts a centralized database of information about criminal cases in Pennsylvania. This allows interested parties to more easily and accurately compile the data needed to produce research on criminal justice issues in the state.  
 
+The UJS Portal publishes information about individual cases in two formats: a human-friendly PDF file format and a structured machine-friendly file format called JSON ("JavaScript Object Notation") available through an open API ("Application Programming Interface"). An example of the PDF file format can be generated at the following url: [https://ujsportal.pacourts.us/CaseSearch](https://ujsportal.pacourts.us/CaseSearch). 
+
 Court Dockets
 -----
 
-The UJS Portal publishes information about individual dockets in two formats: a human-friendly PDF file format and a structured machine-friendly file format called JSON ("JavaScript Object Notation") available through an open API ("Application Programming Interface"). An example of the PDF file format can be generated at the following url: [https://ujsportal.pacourts.us/DocketSheets/MDJ.aspx](https://ujsportal.pacourts.us/DocketSheets/MDJ.aspx). An example of the JSON file format is available here: [https://services.pacourts.us/public/v1/cases/MJ-05215-CR-0000031-2019](https://services.pacourts.us/public/v1/cases/MJ-05215-CR-0000031-2019).
+If you enter a docket number, for instance MJ-05215-CR-0000031-2019, at the Case Search above and click on the icon of a page with the letter "D" (for docket), you will be redirected to a downloadable PDF like the one at [https://ujsportal.pacourts.us/Report/MdjDocketSheet?docketNumber=MJ-05215-CR-0000031-2019&dnh=E%2Bkk01aSM4Gvu8r8wqYZmg%3D%3D](https://ujsportal.pacourts.us/Report/MdjDocketSheet?docketNumber=MJ-05215-CR-0000031-2019&dnh=E%2Bkk01aSM4Gvu8r8wqYZmg%3D%3D). 
+
+
+Court Summaries
+----
+
+If you enter a docket number, for instance MJ-05215-CR-0000031-2019, at the Case Search above and click on the icon of a courthouse, you will be taken to a court summary PDF, like the one at [https://ujsportal.pacourts.us/Report/MdjCourtSummary?docketNumber=MJ-05215-CR-0000031-2019&dnh=E%2Bkk01aSM4Gvu8r8wqYZmg%3D%3D](https://ujsportal.pacourts.us/Report/MdjCourtSummary?docketNumber=MJ-05215-CR-0000031-2019&dnh=E%2Bkk01aSM4Gvu8r8wqYZmg%3D%3D).
+
+Combined Data
+----
+
+To use the API, you'd use the URL `https://services.pacourts.us/public/v1/cases/` followed by a docket number. 
+
+An example of the JSON file format is available here: [https://services.pacourts.us/public/v1/cases/MJ-05215-CR-0000031-2019](https://services.pacourts.us/public/v1/cases/MJ-05215-CR-0000031-2019).
+
+To the best of my knowledge, this combines the data from Court Dockets and Court Summaries into one JSON document.
+
+
+
 
 
 ### API Considerations
@@ -192,7 +220,45 @@ One worthy endeavor could be to fix / modernize / redesign a system that would:
 
 Organizations (and maybe citizens?) can also request a custom data pull from the Commonwealth, at a cost of $80 per worker hour.  I have a well-organized dataset that was obtained this way, consisting of a huge statewide set of pipe delimited text files for the date range 1/1/2016 through 2/6/2023.  
 
-This could be a great basis for a more data-analysis focused hackathon.
+Here are the data files, which are related to Common Pleas Criminal Case Management System (CPCMS) and Magisterial District Judge System (MDJS).
+
+CPCMS_AliasData.txt
+CPCMS_AttorneyData.txt
+CPCMS_BailActionData.txt
+CPCMS_BailPostData.txt
+CPCMS_CalendarEventData.txt
+CPCMS_CaseData.txt
+CPCMS_DiversionaryData.txt
+CPCMS_DocketEntryData.txt
+CPCMS_FinancialData.txt
+CPCMS_OffenseData.txt
+CPCMS_ParticipantConfinementData.txt
+CPCMS_PaymentPlanData.txt
+CPCMS_RelatedCaseData.txt
+CPCMS_SentenceData.txt
+CPCMS_SentenceLinkData.txt
+MDJS_AliasData.txt
+MDJS_AttorneyData.txt
+MDJS_BailActionData.txt
+MDJS_BailPostData.txt
+MDJS_CalendarEventData.txt
+MDJS_CaseConfinementData.txt
+MDJS_CaseData.txt
+MDJS_DocketEntryData.txt
+MDJS_FinancialData.txt
+MDJS_OffenseData.txt
+MDJS_PaymentPlanData.txt
+MDJS_SentenceData.txt
+
+And here's what some of these pipe-delimited files have as columns:
+
+* `CPCMS_AttorneyData.txt`: DocketNumber|OTN|AttorneyName|SupremeCourtNumber|RepresentationType|AttorneyStatus|RepresentationDate|AttorneyStatusDate|Address|City|State|ZipCode
+* `CPCMS_SentenceData.txt`: DocketNumber|OTN|OriginatingOffenseSequenceNumber|OffenseSequenceNumber|SentenceType|SentenceDate|SentencePeriod|ProgramType|EffectiveSentenceDate|MinYears|MinMonths|MinDays|MinHours|MaxYears|MaxMonths|MaxDays|MaxHours|SentencingJudge|SentencingLocation|SentencingEventType|SentenceConditions|CreditForTimeServed|CaseDisposition|OffenseDisposition|DisposingJudge
+* `CPCMS_OffenseData.txt`: DocketNumber|OTN|OffenseSequenceNumber|Title|Section|SubSection|Description|OffenseDate|OffenseDisposition|OffenseDispositionDate|LeadOffenseIndicator|OffenseGrade
+
+This could be a great basis for a more data-analysis focused hackathon for people who are more interested in data science than software development.
+
+Ideally, however, results from data analysis could be displayed in a website and made user-friendly with developer help!
 
 ## What Do I, Joy, Offer?
 
