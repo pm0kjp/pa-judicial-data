@@ -111,8 +111,6 @@ Philadelphia Municipal Court Retention vote for 2023:
 
 ## About the Criminal Legal System
 
-
-
 Municipal Court / Magisterial District Court:
 ----
 
@@ -153,8 +151,7 @@ In order of most serious to least serious, Pennsylvania crime classifications in
 
 * The mandatory minimum and maximum penalties for a criminal conviction depend on the classification of crime. Each criminal classification includes sentencing guidelines, which the court considers in determining the appropriate sentence for an offender. This includes considering the Offense Gravity Score, Prior Record Score, and any enhancements, and aggravating or mitigating circumstances.
 
-
-### Issues and Questions
+## Issues and Questions
 
 The criminal legal system in Pennsylvania (and elsewhere) can show bias.  Things worth studying in the criminal legal system include:
 
@@ -198,6 +195,26 @@ To use the API, you'd use the URL `https://services.pacourts.us/public/v1/cases/
 An example of the JSON file format is available here: [https://services.pacourts.us/public/v1/cases/MJ-05215-CR-0000031-2019](https://services.pacourts.us/public/v1/cases/MJ-05215-CR-0000031-2019).
 
 To the best of my knowledge, this combines the data from Court Dockets and Court Summaries into one JSON document.
+
+### About Dockets
+
+Counties Outside of Philadelphia
+-----
+
+In counties outside of Philadelphia, the Magisterial District Courts ("MJ") maintain jurisdiction over criminal preliminary arraignments and preliminary hearings, summary criminal offenses, traffic offenses, municipal code violations, landlord / tenant suits, and civil claims where damages do not exceed $12,000. Dockets for such cases have a docket number that looks something like `MJ-05243-CR-0000127-2019`, where:
+
+* `05` represents the district ID number listed [here](http://www.pacourts.us/courts/courts-of-common-pleas/judicial-districts) (in this example, it is the district ID for Allegheny County)
+* `243` represents the particular magisterial district court (in this example, it is the district court for Carla M. Swearingen in McKees Rocks, PA)
+* `CR` represents a criminal docket type. The Magisterial District Courts also publish dockets for civil (`CV`), traffic (`TR`), and summary offenses (`SA`). 
+* `0000127` represents the docket iterator
+* `2019` represents the year the docket was initially filed.
+
+More serious criminal cases are transferred to the Court of Common Pleas ("CP") and will have a code similar to `CP-02-CR-0000001-2019`, where the `02` represents the *county* number (not the district ID number) listed [here](http://www.pacourts.us/courts/courts-of-common-pleas/judicial-districts). Such cases will thus have both a MJ and CP docket.
+
+Philadelphia County
+------
+
+In Philadelphia County, the Philadelphia Municipal Court ("MC") has initial jurisdiction in processing every criminal arrest in Philadelphia and conducts misdemeanor trials and preliminary hearings for all felony cases. Such dockets have the code `MC-51-CR-0000001-2019`. More serious criminal cases are adjudicated in the Common Pleas Courts ("CP") and will have the code `CP-51-CR-0000001-2019`. Such cases will have both a MC and a CP docket.
 
 
 
