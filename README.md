@@ -13,7 +13,7 @@ comment: Learn about Pennsylvania court and judicial data.
 
 Information about Pennsylvania Court Data (which includes judicial actions) for the purposes of data and hackathons.
 
-Last updated March 7, 2024.
+Last updated March 21, 2024.
 
 ## About This README
 
@@ -111,10 +111,14 @@ Philadelphia Municipal Court Retention vote for 2023:
 
 ## About the Criminal Legal System
 
-Municipal Court:
+
+
+Municipal Court / Magisterial District Court:
 ----
 
-* Municipal court is the place where lower-level crimes are adjudicated in the City of Philadelphia. Cases that involve only misdemeanor charges are adjudicated entirely in Municipal court, and then the defendant has the option to appeal the decision to the Court of Common Pleas. Cases that involve felonies start in Municipal Court, where the judge makes an initial determination of whether the Commonwealth has shown probable cause that the defendant committed the crimes. If so, the charges are "held for court" and then move on to the Court of Common Pleas.
+* Magisterial District Court is the place where lower-level crimes are adjudicated in most counties in Pennsylvania (not Philadelphia County).  Traffic cases and misdemeanor crimes can be fully adjudicated at this level. Magisterial District Judges also set bail and conduct preliminary hearings in misdemeanor and felony criminal cases to determine if the cases should be dismissed or transferred to the Court of Common Pleas for further proceedings.
+
+* Municipal Court is the Philadelphia version of Magisterial District Court.  Municipal Court is the place where lower-level crimes are adjudicated in the City of Philadelphia. Cases that involve only misdemeanor charges are adjudicated entirely in Municipal court, and then the defendant has the option to appeal the decision to the Court of Common Pleas. Cases that involve felonies start in Municipal Court, where the judge makes an initial determination of whether the Commonwealth has shown probable cause that the defendant committed the crimes. If so, the charges are "held for court" and then move on to the Court of Common Pleas.
 
 Court of Common Pleas:
 ----
@@ -222,33 +226,33 @@ Organizations (and maybe citizens?) can also request a custom data pull from the
 
 Here are the data files, which are related to Common Pleas Criminal Case Management System (CPCMS) and Magisterial District Judge System (MDJS).
 
-CPCMS_AliasData.txt
-CPCMS_AttorneyData.txt
-CPCMS_BailActionData.txt
-CPCMS_BailPostData.txt
-CPCMS_CalendarEventData.txt
-CPCMS_CaseData.txt
-CPCMS_DiversionaryData.txt
-CPCMS_DocketEntryData.txt
-CPCMS_FinancialData.txt
-CPCMS_OffenseData.txt
-CPCMS_ParticipantConfinementData.txt
-CPCMS_PaymentPlanData.txt
-CPCMS_RelatedCaseData.txt
-CPCMS_SentenceData.txt
-CPCMS_SentenceLinkData.txt
-MDJS_AliasData.txt
-MDJS_AttorneyData.txt
-MDJS_BailActionData.txt
-MDJS_BailPostData.txt
-MDJS_CalendarEventData.txt
-MDJS_CaseConfinementData.txt
-MDJS_CaseData.txt
-MDJS_DocketEntryData.txt
-MDJS_FinancialData.txt
-MDJS_OffenseData.txt
-MDJS_PaymentPlanData.txt
-MDJS_SentenceData.txt
+* CPCMS_AliasData.txt
+* CPCMS_AttorneyData.txt
+* CPCMS_BailActionData.txt
+* CPCMS_BailPostData.txt
+* CPCMS_CalendarEventData.txt
+* CPCMS_CaseData.txt
+* CPCMS_DiversionaryData.txt
+* CPCMS_DocketEntryData.txt
+* CPCMS_FinancialData.txt
+* CPCMS_OffenseData.txt
+* CPCMS_ParticipantConfinementData.txt
+* CPCMS_PaymentPlanData.txt
+* CPCMS_RelatedCaseData.txt
+* CPCMS_SentenceData.txt
+* CPCMS_SentenceLinkData.txt
+* MDJS_AliasData.txt
+* MDJS_AttorneyData.txt
+* MDJS_BailActionData.txt
+* MDJS_BailPostData.txt
+* MDJS_CalendarEventData.txt
+* MDJS_CaseConfinementData.txt
+* MDJS_CaseData.txt
+* MDJS_DocketEntryData.txt
+* MDJS_FinancialData.txt
+* MDJS_OffenseData.txt
+* MDJS_PaymentPlanData.txt
+* MDJS_SentenceData.txt
 
 And here's what some of these pipe-delimited files have as columns:
 
