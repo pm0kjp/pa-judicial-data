@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    k.joy.payton@gmail.com
-version:  1.0.0
+version:  1.0.1
 current_version_description: Initial version
 language: en
 narrator: UK English Female
