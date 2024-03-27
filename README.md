@@ -13,7 +13,7 @@ comment: Learn about Pennsylvania court and judicial data.
 
 Information about Pennsylvania Court Data (which includes judicial actions) for the purposes of data and hackathons.
 
-Last updated March 21, 2024.
+Last updated March 27, 2024.
 
 ## About This README
 
@@ -58,6 +58,7 @@ The [Judge Accountability Table (JAT)](https://judgeaccountabilitytable.org/) wa
 This was an important moment because the only time that voters pay much attention at all to judicial elections is when judges are first elected.  Judicial retention votes (essentially, re-election) are mostly pro-forma.
 
 I won't go into more detail here about the new judge elections, because this is a largely political and non-quantitative, non-computational project.  Instead, let's pivot to judicial **retention**.
+
 
 ### Judicial Retention
 
@@ -217,9 +218,6 @@ Philadelphia County
 In Philadelphia County, the Philadelphia Municipal Court ("MC") has initial jurisdiction in processing every criminal arrest in Philadelphia and conducts misdemeanor trials and preliminary hearings for all felony cases. Such dockets have the code `MC-51-CR-0000001-2019`. More serious criminal cases are adjudicated in the Common Pleas Courts ("CP") and will have the code `CP-51-CR-0000001-2019`. Such cases will have both a MC and a CP docket.
 
 
-
-
-
 ### API Considerations
 
 The API, which returns JSON for a given docket or court summary you indicate, is useful.
@@ -236,6 +234,16 @@ One worthy endeavor could be to fix / modernize / redesign a system that would:
 * Grab those dockets from the UJS API
 * Transform the JSON into a more easily interrogable format (e.g. SQL database in the cloud)
 * Automate periodic updating of the data on an ongoing basis.
+
+### JAT/RLadies Hackathon
+
+Joy Payton presented the R/Ladies organization (a group of all kinds of people, not just women, who use the R statistical programming language) with the possibility of using judicial data for a hackathon in 2021.
+
+The JAT/RLadies partnership included:
+
+* anonymized data just for Philadelphia County
+* in .csv files that were the fruit of the jerry-rigged .json -> SQL system described above
+* the repo for that work is at [https://github.com/rladiesPHL/2021_datathon](https://github.com/rladiesPHL/2021_datathon).  A combined report is downloadable at [https://github.com/rladiesPHL/2021_datathon/blob/main/analyses/final_report/CombinedReportMerged.pdf](https://github.com/rladiesPHL/2021_datathon/blob/main/analyses/final_report/CombinedReportMerged.pdf).
 
 ### Data Considerations
 
