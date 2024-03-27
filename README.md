@@ -1,7 +1,7 @@
 <!--
 author:   Joy Payton
 email:    k.joy.payton@gmail.com
-version:  1.0.1
+version:  1.1.0
 current_version_description: Initial version
 language: en
 narrator: UK English Female
@@ -235,7 +235,7 @@ One worthy endeavor could be to fix / modernize / redesign a system that would:
 * Transform the JSON into a more easily interrogable format (e.g. SQL database in the cloud)
 * Automate periodic updating of the data on an ongoing basis.
 
-### JAT/RLadies Hackathon
+## JAT/RLadies Hackathon
 
 Joy Payton presented the R/Ladies organization (a group of all kinds of people, not just women, who use the R statistical programming language) with the possibility of using judicial data for a hackathon in 2021.
 
@@ -243,9 +243,16 @@ The JAT/RLadies partnership included:
 
 * anonymized data just for Philadelphia County
 * in .csv files that were the fruit of the jerry-rigged .json -> SQL system described above
-* the repo for that work is at [https://github.com/rladiesPHL/2021_datathon](https://github.com/rladiesPHL/2021_datathon).  A combined report is downloadable at [https://github.com/rladiesPHL/2021_datathon/blob/main/analyses/final_report/CombinedReportMerged.pdf](https://github.com/rladiesPHL/2021_datathon/blob/main/analyses/final_report/CombinedReportMerged.pdf).
+* the repo for that work is at [https://github.com/rladiesPHL/2021_datathon](https://github.com/rladiesPHL/2021_datathon).  
 
-### Data Considerations
+Three teams emerged to contribute to this work.
+
+* One team created a dashboard to visualize trends [https://awalsh.shinyapps.io/2021_datathon_dashboard/](https://awalsh.shinyapps.io/2021_datathon_dashboard/) (with code at [https://github.com/yjunechoe/2021_datathon_dashboard](https://github.com/yjunechoe/2021_datathon_dashboard))
+* A second team modeled judge sentencing harshness in a random effects model.  
+* A third team looked at the effects of Larry Krasner's prosecutorial discretion and how it affected bail and sentencing.
+* A combined, detailed report from all three teams is available at A combined report is downloadable at [https://github.com/rladiesPHL/2021_datathon/blob/main/analyses/final_report/CombinedReportMerged.pdf](https://github.com/rladiesPHL/2021_datathon/blob/main/analyses/final_report/CombinedReportMerged.pdf).
+
+## Data Considerations
 
 Organizations (and maybe citizens?) can also request a custom data pull from the Commonwealth, at a cost of $80 per worker hour.  I have a well-organized dataset that was obtained this way, consisting of a huge statewide set of pipe delimited text files for the date range 1/1/2016 through 2/6/2023.  
 
