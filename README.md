@@ -286,16 +286,437 @@ Here are the data files, which are related to Common Pleas Criminal Case Managem
 * MDJS_PaymentPlanData.txt
 * MDJS_SentenceData.txt
 
-And here's what some of these pipe-delimited files have as columns:
-
-* `CPCMS_AttorneyData.txt`: DocketNumber|OTN|AttorneyName|SupremeCourtNumber|RepresentationType|AttorneyStatus|RepresentationDate|AttorneyStatusDate|Address|City|State|ZipCode
-* `CPCMS_SentenceData.txt`: DocketNumber|OTN|OriginatingOffenseSequenceNumber|OffenseSequenceNumber|SentenceType|SentenceDate|SentencePeriod|ProgramType|EffectiveSentenceDate|MinYears|MinMonths|MinDays|MinHours|MaxYears|MaxMonths|MaxDays|MaxHours|SentencingJudge|SentencingLocation|SentencingEventType|SentenceConditions|CreditForTimeServed|CaseDisposition|OffenseDisposition|DisposingJudge
-* `CPCMS_OffenseData.txt`: DocketNumber|OTN|OffenseSequenceNumber|Title|Section|SubSection|Description|OffenseDate|OffenseDisposition|OffenseDispositionDate|LeadOffenseIndicator|OffenseGrade
-
 This could be a great basis for a more data-analysis focused hackathon for people who are more interested in data science than software development.
 
 Ideally, however, results from data analysis could be displayed in a website and made user-friendly with developer help!
 
+This data needs to be selected for its best use -- instead of making all data available to lots of people, we're aware that this contains sensitive data.
+
+Therefore we hope to provide subsets of data that:
+
+* Are limited in scope to a specific question (not all tables -- which columns from which 3 or 4 tables would help you answer your question?)
+* Are deidentified (so things like names and dates of birth are not included)
+
+In the next few pages are the schema for this data (as described by one particular kind of database -- your mileage may vary when it comes to datatypes).
+
+
+### CPCMS_AliasData
+
+| fullname | mode | type | description |
+|---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+|OTN | NULLABLE | STRING | |
+|DefendantName | NULLABLE | STRING | 
+
+### CPCMS_AttorneyData
+
+| fullname | mode | type | description| 
+|---|---|---|---|
+| DocketNumber | NULLABLE | STRING | | 
+| OTN | NULLABLE | STRING | | 
+| AttorneyName | NULLABLE | STRING | | 
+| SupremeCourtNumber | NULLABLE | INTEGER | | 
+| RepresentationType | NULLABLE | STRING | | 
+| AttorneyStatus | NULLABLE | STRING | | 
+| RepresentationDate | NULLABLE | TIMESTAMP | | 
+| AttorneyStatusDate | NULLABLE | TIMESTAMP | | 
+| Address | NULLABLE | STRING | | 
+| City | NULLABLE | STRING | | 
+| State | NULLABLE | STRING | | 
+| ZipCode | NULLABLE | INTEGER | | 
+
+### CPCMS_BailActionData
+
+|fullname | mode | type | description |
+|---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| BailIdentifier | NULLABLE | STRING | |
+| BailType | NULLABLE | STRING | |
+| BailSetAmount | NULLABLE | FLOAT | |
+| BailPercentage | NULLABLE | FLOAT | |
+| BailActionAuthority | NULLABLE | STRING | |
+| BailAction | NULLABLE | STRING | |
+| BailActionDate | NULLABLE | TIMESTAMP | |
+| BailActionCreatedSystem | NULLABLE | STRING | 
+
+### CPCMS_BailPostData
+
+| fullname | mode | type | description |
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| BailIdentifier | NULLABLE | STRING | |
+| BailPostingStatus | NULLABLE | STRING | |
+| BailPostingStatusDate | NULLABLE | TIMESTAMP | |
+| SecurityType | NULLABLE | STRING | |
+| SecurityAmount | NULLABLE | FLOAT | |
+| SuretyType | NULLABLE | STRING | |
+| SuretyName | NULLABLE | STRING | |
+| BailPostCreatedSystem | NULLABLE | STRING | 
+
+### CPCMS_CalendarEventData
+
+| fullname | mode | type | description |
+|---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| BailIdentifier | NULLABLE | STRING | |
+| BailPostingStatus | NULLABLE | STRING | |
+| BailPostingStatusDate | NULLABLE | TIMESTAMP | |
+| SecurityType | NULLABLE | STRING | |
+| SecurityAmount | NULLABLE | FLOAT | |
+| SuretyType | NULLABLE | STRING | |
+| SuretyName | NULLABLE | STRING | |
+| BailPostCreatedSystem | NULLABLE | STRING | 
+
+### CPCMS_CaseData
+
+NOTE: This table has highly identifying data.  It should generally not be shared but instead replaced with the de-identified version.
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| County | NULLABLE | STRING | |
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| OriginatingDocketNumber | NULLABLE | STRING | |
+| FiledDate | NULLABLE | TIMESTAMP | |
+| InitiationDate | NULLABLE | TIMESTAMP | |
+| ArrestDate | NULLABLE | TIMESTAMP | |
+| CaseStatus | NULLABLE | STRING | |
+| DefendantName | NULLABLE | STRING | |
+| DefendantGender | NULLABLE | STRING | |
+| DefendantRace | NULLABLE | STRING | |
+| DefendantDOB | NULLABLE | DATE | |
+| DefendantZipCode | NULLABLE | INTEGER | 
+
+### CPCMS_Case_Deidentified
+
+| fullname | mode | type | description|
+| ---|---|---|---|
+| County | NULLABLE | STRING | |
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| OriginatingDocketNumber | NULLABLE | STRING | |
+| FiledDate | NULLABLE | TIMESTAMP | |
+| InitiationDate | NULLABLE | TIMESTAMP | |
+| ArrestDate | NULLABLE | TIMESTAMP | |
+| CaseStatus | NULLABLE | STRING | |
+| DefendantName | NULLABLE | STRING | |
+| DefendantGender | NULLABLE | STRING | |
+| DefendantRace | NULLABLE | STRING | |
+| DefendantDOB | NULLABLE | DATE | |
+| DefendantZipCode | NULLABLE | INTEGER | 
+
+### CPCMS_DiversionaryData
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| County | NULLABLE | STRING | |
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| OriginatingDocketNumber | NULLABLE | STRING | |
+| FiledDate | NULLABLE | TIMESTAMP | |
+| InitiationDate | NULLABLE | TIMESTAMP | |
+| ArrestDate | NULLABLE | TIMESTAMP | |
+| CaseStatus | NULLABLE | STRING | |
+| DefendantName | NULLABLE | STRING | |
+| DefendantGender | NULLABLE | STRING | |
+| DefendantRace | NULLABLE | STRING | |
+| DefendantDOB | NULLABLE | DATE | |
+| DefendantZipCode | NULLABLE | INTEGER | 
+
+### CPCMS_DocketEntryData
+
+| fullname | mode | type | description|
+| ---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| FiledDate | NULLABLE | TIMESTAMP | |
+| OfficialDocketEntry | NULLABLE | STRING | |
+| Filer | NULLABLE | STRING | 
+ 
+### CPCMS_FinancialData
+
+| fullname | mode | type | description|
+| ---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| AssessmentCategory | NULLABLE | STRING | |
+| AssessmentType | NULLABLE | STRING | |
+| AssessedAmount | NULLABLE | FLOAT | |
+| AdjustedAmount | NULLABLE | FLOAT | |
+| NonMonetaryPaymentAmount | NULLABLE | FLOAT | |
+| PaymentAmount | NULLABLE | FLOAT | |
+| Balance | NULLABLE | FLOAT | 
+
+### CPCMS_OffenseData
+
+| fullname | mode | type | description|
+| ---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| OffenseSequenceNumber | NULLABLE | INTEGER | |
+| Title | NULLABLE | STRING | |
+| Section | NULLABLE | STRING | |
+| SubSection | NULLABLE | STRING | |
+| Description | NULLABLE | STRING | |
+| OffenseDate | NULLABLE | DATE | |
+| OffenseDisposition | NULLABLE | STRING | |
+| OffenseDispositionDate | NULLABLE | TIMESTAMP | |
+| LeadOffenseIndicator | NULLABLE | INTEGER | |
+| OffenseGrade | NULLABLE | STRING | 
+
+### CPCMS_ParticipantConfinementData
+
+| fullname | mode | type | description|
+| ---|---|---|---|
+| DefendantName | NULLABLE | STRING | |
+| DefendantDOB | NULLABLE | DATE | |
+| ConfinementDate | NULLABLE | TIMESTAMP | |
+| ConfinementEndDate | NULLABLE | TIMESTAMP | |
+| ConfinementType | NULLABLE | STRING | |
+| ReportingInstitution | NULLABLE | STRING | |
+| ConfinementReason | NULLABLE | STRING | |
+| StillInCustody | NULLABLE | STRING | 
+
+### CPCMS_PaymentPlanData
+
+| fullname | mode | type | description
+| ---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| PaymentPlanFrequency | NULLABLE | STRING | |
+| DueDate | NULLABLE | DATE | |
+| Active | NULLABLE | BOOLEAN | |
+| Suspended | NULLABLE | STRING | |
+| NextDueAmt | NULLABLE | FLOAT | |
+| OverdueAmt | NULLABLE | FLOAT | 
+
+### CPCMS_RelatedCaseData
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| string_field_0 | NULLABLE | STRING | |
+| string_field_1 | NULLABLE | STRING | |
+| string_field_2 | NULLABLE | STRING | |
+| string_field_3 | NULLABLE | STRING | 
+
+### CPCMS_SentenceData
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| OriginatingOffenseSequenceNumber | NULLABLE | INTEGER | |
+| OffenseSequenceNumber | NULLABLE | INTEGER | |
+| SentenceType | NULLABLE | STRING | |
+| SentenceDate | NULLABLE | TIMESTAMP | |
+| SentencePeriod | NULLABLE | STRING | |
+| ProgramType | NULLABLE | STRING | |
+| EffectiveSentenceDate | NULLABLE | TIMESTAMP | |
+| MinYears | NULLABLE | FLOAT | |
+| MinMonths | NULLABLE | FLOAT | |
+| MinDays | NULLABLE | FLOAT | |
+| MinHours | NULLABLE | FLOAT | |
+| MaxYears | NULLABLE | FLOAT | |
+| MaxMonths | NULLABLE | FLOAT | |
+| MaxDays | NULLABLE | FLOAT | |
+| MaxHours | NULLABLE | FLOAT | |
+| SentencingJudge | NULLABLE | STRING | |
+| SentencingLocation | NULLABLE | STRING | |
+| SentencingEventType | NULLABLE | STRING | |
+| SentenceConditions | NULLABLE | STRING | |
+| CreditForTimeServed | NULLABLE | INTEGER | |
+| CaseDisposition | NULLABLE | STRING | |
+| OffenseDisposition | NULLABLE | STRING | |
+| DisposingJudge | NULLABLE | STRING | 
+
+### CPCMS_SentenceLinkData
+
+
+### MDJS_AliasData
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| string_field_0 | NULLABLE | STRING | |
+| string_field_1 | NULLABLE | STRING | |
+| string_field_2 | NULLABLE | STRING | 
+
+### MDJS_AttorneyData
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| AttorneyName | NULLABLE | STRING | |
+| SupremeCourtNumber | NULLABLE | INTEGER | |
+| AttorneyRole | NULLABLE | STRING | |
+| AttorneyStatus | NULLABLE | STRING | |
+| ActiveDate | NULLABLE | TIMESTAMP | |
+| InactiveDate | NULLABLE | TIMESTAMP | |
+| Address | NULLABLE | STRING | |
+| City | NULLABLE | STRING | |
+| State | NULLABLE | STRING | |
+| ZipCode | NULLABLE | INTEGER | 
+
+### MDJS_BailActionData
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| BailIdentifier | NULLABLE | STRING | |
+| BailType | NULLABLE | STRING | |
+| BailSetAmount | NULLABLE | FLOAT | |
+| BailPercentage | NULLABLE | FLOAT | |
+| BailActionAuthority | NULLABLE | STRING | |
+| BailAction | NULLABLE | STRING | |
+| BailActionDate | NULLABLE | TIMESTAMP | |
+| BailActionCreatedSystem | NULLABLE | STRING | 
+
+### MDJS_BailPostData
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| BailIdentifier | NULLABLE | STRING | |
+| BailPostingStatus | NULLABLE | STRING | |
+| BailPostingStatusDate | NULLABLE | TIMESTAMP | |
+| SecurityType | NULLABLE | STRING | |
+| SecurityAmount | NULLABLE | FLOAT | |
+| SuretyType | NULLABLE | STRING | |
+| SuretyName | NULLABLE | STRING | |
+| BailPostCreatedSystem | NULLABLE | STRING | 
+
+### MDJS_CalendarEventData
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| County | NULLABLE | STRING | |
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| FiledDate | NULLABLE | TIMESTAMP | |
+| InitiationDate | NULLABLE | TIMESTAMP | |
+| ArrestDate | NULLABLE | TIMESTAMP | |
+| CaseStatus | NULLABLE | STRING | |
+| DefendantName | NULLABLE | STRING | |
+| DefendantGender | NULLABLE | STRING | |
+| DefendantRace | NULLABLE | STRING | |
+| DefendantDOB | NULLABLE | DATE | |
+| DefendantZipCode | NULLABLE | INTEGER | 
+
+### MDJS_CaseConfinementData
+
+### MDJS_CaseData
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| County | NULLABLE | STRING | |
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| FiledDate | NULLABLE | TIMESTAMP | |
+| InitiationDate | NULLABLE | TIMESTAMP | |
+| ArrestDate | NULLABLE | TIMESTAMP | |
+| CaseStatus | NULLABLE | STRING | |
+| DefendantName | NULLABLE | STRING | |
+| DefendantGender | NULLABLE | STRING | |
+| DefendantRace | NULLABLE | STRING | |
+| DefendantDOB | NULLABLE | DATE | |
+| DefendantZipCode | NULLABLE | INTEGER | 
+
+### MJDS_CaseData_Deidentified
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| DefendantUniqueID | NULLABLE | INTEGER | |
+| County | NULLABLE | STRING | |
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| FiledDate | NULLABLE | TIMESTAMP | |
+| InitiationDate | NULLABLE | TIMESTAMP | |
+| ArrestDate | NULLABLE | TIMESTAMP | |
+| CaseStatus | NULLABLE | STRING | |
+| DefendantGender | NULLABLE | STRING | |
+| DefendantRace | NULLABLE | STRING | |
+| DefendantZipCode | NULLABLE | INTEGER | 
+
+### MDJS_DocketEntryData
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| FiledDate | NULLABLE | DATE | |
+| OfficialDocketEntry | NULLABLE | STRING | |
+| Filer | NULLABLE | STRING | 
+
+### MDJS_FinancialData
+
+| fullname | mode | type | description |
+| ---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| AssessmentCategory | NULLABLE | STRING | |
+| AssessmentType | NULLABLE | STRING | |
+| AssessedAmount | NULLABLE | FLOAT | |
+| AdjustedAmount | NULLABLE | FLOAT | |
+| NonMonetaryPaymentAmount | NULLABLE | FLOAT | |
+| PaymentAmount | NULLABLE | FLOAT | |
+| Balance | NULLABLE | FLOAT | |
+| 
+### MDJS_OffenseData
+| 
+| fullname | mode | type | description |
+| ---|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| OffenseSequenceNumber | NULLABLE | INTEGER | |
+| Title | NULLABLE | STRING | |
+| Section | NULLABLE | STRING | |
+| SubSection | NULLABLE | STRING | |
+| Description | NULLABLE | STRING | |
+| OffenseDate | NULLABLE | DATE | |
+| OffenseDisposition | NULLABLE | STRING | |
+| OffenseDispositionDate | NULLABLE | TIMESTAMP | |
+| LeadOffenseIndicator | NULLABLE | INTEGER | |
+| OffenseGrade | NULLABLE | STRING | |
+| AdvisedOfHisRightToApplyForAssignmentOfCounsel | NULLABLE | STRING | |
+| PublicDefenderRequestedByTheDefendant | NULLABLE | STRING | |
+| ApplicationProvidedForAppointmentOfPublicDefender | NULLABLE | STRING | 
+
+### MDJS_PaymentPlanData
+
+| fullname | mode | type | description |
+| --|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| PaymentPlanFrequency | NULLABLE | STRING | |
+| DueDate | NULLABLE | TIMESTAMP | |
+| Active | NULLABLE | STRING | |
+| NextDueAmt | NULLABLE | FLOAT | |
+| OverdueAmt | NULLABLE | FLOAT | 
+
+### MDJS_SentenceData
+
+| fullname | mode | type | description |
+| --|---|---|---|
+| DocketNumber | NULLABLE | STRING | |
+| OTN | NULLABLE | STRING | |
+| OffenseSequenceNumber | NULLABLE | INTEGER | |
+| PenaltyType | NULLABLE | STRING | |
+| ProgramType | NULLABLE | STRING | |
+| ProgramPeriod | NULLABLE | STRING | |
+| StartDate | NULLABLE | TIMESTAMP | |
+| EndDate | NULLABLE | TIMESTAMP | |
+| FacilityLocation | NULLABLE | STRING | |
+| SentencingJudge | NULLABLE | STRING | |
+| PenaltyEventType | NULLABLE | STRING | |
+| SentenceConditions | NULLABLE | STRING | |
+| CaseDisposition | NULLABLE | STRING | |
+| OffenseDisposition | NULLABLE | STRING | |
+| JudgeName | NULLABLE | STRING | 
+ 
 ## What Do I, Joy, Offer?
 
 * I'm not a lawyer
