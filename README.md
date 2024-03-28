@@ -302,6 +302,8 @@ In the next few pages are the schema for this data (as described by one particul
 
 ### CPCMS_AliasData
 
+NOTE: This table has highly identifying data.  It should generally not be shared 
+
 | fullname | mode | type | description |
 |---|---|---|---|
 | DocketNumber | NULLABLE | STRING | |
@@ -389,7 +391,7 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | DefendantDOB | NULLABLE | DATE | |
 | DefendantZipCode | NULLABLE | INTEGER | 
 
-### CPCMS_Case_Deidentified
+### CPCMS\_Case\_Deidentified
 
 | fullname | mode | type | description|
 | ---|---|---|---|
@@ -481,7 +483,7 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 
 ### CPCMS_PaymentPlanData
 
-| fullname | mode | type | description
+| fullname | mode | type | description |
 | ---|---|---|---|
 | DocketNumber | NULLABLE | STRING | |
 | OTN | NULLABLE | STRING | |
@@ -496,10 +498,10 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 
 | fullname | mode | type | description |
 | ---|---|---|---|
-| string_field_0 | NULLABLE | STRING | |
-| string_field_1 | NULLABLE | STRING | |
-| string_field_2 | NULLABLE | STRING | |
-| string_field_3 | NULLABLE | STRING | 
+| string\_field\_0 | NULLABLE | STRING | |
+| string\_field\_1 | NULLABLE | STRING | |
+| string\_field\_2 | NULLABLE | STRING | |
+| string\_field\_3 | NULLABLE | STRING | 
 
 ### CPCMS_SentenceData
 
@@ -534,15 +536,17 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 ### CPCMS_SentenceLinkData
 
 
-### MDJS_AliasData
+### MDJS\_AliasData
+
+NOTE: This table has highly identifying data.  It should generally not be shared 
 
 | fullname | mode | type | description |
 | ---|---|---|---|
-| string_field_0 | NULLABLE | STRING | |
-| string_field_1 | NULLABLE | STRING | |
-| string_field_2 | NULLABLE | STRING | 
+| string\_field\_0 | NULLABLE | STRING | |
+| string\_field\_1 | NULLABLE | STRING | |
+| string\_field\_2 | NULLABLE | STRING | 
 
-### MDJS_AttorneyData
+### MDJS\_AttorneyData
 
 | fullname | mode | type | description |
 | ---|---|---|---|
@@ -559,7 +563,7 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | State | NULLABLE | STRING | |
 | ZipCode | NULLABLE | INTEGER | 
 
-### MDJS_BailActionData
+### MDJS\_BailActionData
 
 | fullname | mode | type | description |
 | ---|---|---|---|
@@ -574,7 +578,7 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | BailActionDate | NULLABLE | TIMESTAMP | |
 | BailActionCreatedSystem | NULLABLE | STRING | 
 
-### MDJS_BailPostData
+### MDJS\_BailPostData
 
 | fullname | mode | type | description |
 | ---|---|---|---|
@@ -589,7 +593,7 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | SuretyName | NULLABLE | STRING | |
 | BailPostCreatedSystem | NULLABLE | STRING | 
 
-### MDJS_CalendarEventData
+### MDJS\_CalendarEventData
 
 | fullname | mode | type | description |
 | ---|---|---|---|
@@ -606,9 +610,9 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | DefendantDOB | NULLABLE | DATE | |
 | DefendantZipCode | NULLABLE | INTEGER | 
 
-### MDJS_CaseConfinementData
+### MDJS\_CaseConfinementData
 
-### MDJS_CaseData
+### MDJS\_CaseData
 
 | fullname | mode | type | description |
 | ---|---|---|---|
@@ -625,7 +629,7 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | DefendantDOB | NULLABLE | DATE | |
 | DefendantZipCode | NULLABLE | INTEGER | 
 
-### MJDS_CaseData_Deidentified
+### MJDS\_CaseData\_Deidentified
 
 | fullname | mode | type | description |
 | ---|---|---|---|
@@ -641,7 +645,7 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | DefendantRace | NULLABLE | STRING | |
 | DefendantZipCode | NULLABLE | INTEGER | 
 
-### MDJS_DocketEntryData
+### MDJS\_DocketEntryData
 
 | fullname | mode | type | description |
 | ---|---|---|---|
@@ -651,7 +655,7 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | OfficialDocketEntry | NULLABLE | STRING | |
 | Filer | NULLABLE | STRING | 
 
-### MDJS_FinancialData
+### MDJS\_FinancialData
 
 | fullname | mode | type | description |
 | ---|---|---|---|
@@ -665,8 +669,8 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | PaymentAmount | NULLABLE | FLOAT | |
 | Balance | NULLABLE | FLOAT | |
 | 
-### MDJS_OffenseData
-| 
+### MDJS\_OffenseData
+
 | fullname | mode | type | description |
 | ---|---|---|---|
 | DocketNumber | NULLABLE | STRING | |
@@ -685,7 +689,7 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | PublicDefenderRequestedByTheDefendant | NULLABLE | STRING | |
 | ApplicationProvidedForAppointmentOfPublicDefender | NULLABLE | STRING | 
 
-### MDJS_PaymentPlanData
+### MDJS\_PaymentPlanData
 
 | fullname | mode | type | description |
 | --|---|---|---|
@@ -697,7 +701,7 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | NextDueAmt | NULLABLE | FLOAT | |
 | OverdueAmt | NULLABLE | FLOAT | 
 
-### MDJS_SentenceData
+### MDJS\_SentenceData
 
 | fullname | mode | type | description |
 | --|---|---|---|
