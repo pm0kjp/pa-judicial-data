@@ -167,8 +167,8 @@ The criminal legal system in Pennsylvania (and elsewhere) can show bias.  Things
 We can get public information about judicial actions (sentences, bail, defendant demographics, etc.) in several ways:
 
 * PDFs (Code for Philly did some work with PDFs a few years ago)
-* An open API that returns JSON (much easier than screen-scraping PDFs!)
-* A data request (costs money). 
+* An open API that returns JSON (much easier than screen-scraping PDFs!).  A kludgy system that used this API was the source of an older data set that has been used a few times in Philly (e.g. for the JAT/RLadies hackathon)
+* A formal data request to the Commonwealth (costs money).  We have some point-in-time data that came from one of these!
 
 
 ###  Pennsylvania Criminal Justice Database
