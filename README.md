@@ -252,7 +252,7 @@ Three teams emerged to contribute to this work.
 * A third team looked at the effects of Larry Krasner's prosecutorial discretion and how it affected bail and sentencing.
 * A combined, detailed report from all three teams is available at A combined report is downloadable at [https://github.com/rladiesPHL/2021_datathon/blob/main/analyses/final_report/CombinedReportMerged.pdf](https://github.com/rladiesPHL/2021_datathon/blob/main/analyses/final_report/CombinedReportMerged.pdf).
 
-## Data Considerations
+## Data Considerations (for giant dataset)
 
 Organizations (and maybe citizens?) can also request a custom data pull from the Commonwealth, at a cost of $80 per worker hour.  I have a well-organized dataset that was obtained this way, consisting of a huge statewide set of pipe delimited text files for the date range 1/1/2016 through 2/6/2023.  
 
@@ -302,7 +302,7 @@ In the next few pages are the schema for this data (as described by one particul
 
 ### CPCMS_AliasData
 
-NOTE: This table has highly identifying data.  It should generally not be shared 
+NOTE: This table has highly identifying data.  It should generally not be shared.
 
 | fullname | mode | type | description |
 |---|---|---|---|
@@ -311,6 +311,8 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 |DefendantName | NULLABLE | STRING | 
 
 ### CPCMS_AttorneyData
+
+NOTE: This table has highly identifying data.  It should be shared with care.  Attorney data is public but these are human people's addresses.  Also, atty data can sometimes be subtly identifying of the defendant.
 
 | fullname | mode | type | description| 
 |---|---|---|---|
@@ -344,6 +346,8 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 
 ### CPCMS_BailPostData
 
+NOTE: This table has highly identifying data.  I believe that SuretyName is the name of the person posting bail.
+
 | fullname | mode | type | description |
 | DocketNumber | NULLABLE | STRING | |
 | OTN | NULLABLE | STRING | |
@@ -360,16 +364,12 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 
 | fullname | mode | type | description |
 |---|---|---|---|
-| DocketNumber | NULLABLE | STRING | |
 | OTN | NULLABLE | STRING | |
-| BailIdentifier | NULLABLE | STRING | |
-| BailPostingStatus | NULLABLE | STRING | |
-| BailPostingStatusDate | NULLABLE | TIMESTAMP | |
-| SecurityType | NULLABLE | STRING | |
-| SecurityAmount | NULLABLE | FLOAT | |
-| SuretyType | NULLABLE | STRING | |
-| SuretyName | NULLABLE | STRING | |
-| BailPostCreatedSystem | NULLABLE | STRING | 
+| CalendarEventType | NULLABLE | STRING | |
+| CalendarEventDate | NULLABLE | TIMESTAMP | |
+| CalendarEventLocation | NULLABLE | STRING | |
+| ScheduleStatus | NULLABLE | STRING | |
+| AttendingJudge | NULLABLE | STRING | |
 
 ### CPCMS_CaseData
 
@@ -393,8 +393,11 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 
 ### CPCMS\_Case\_Deidentified
 
+Note: while this is deidentified, it does contain ZIP, which can be identifying.  Only include ZIP if required for analysis.
+
 | fullname | mode | type | description|
 | ---|---|---|---|
+| DefendantUniqueID | NULLABLE | INTEGER | |
 | County | NULLABLE | STRING | |
 | DocketNumber | NULLABLE | STRING | |
 | OTN | NULLABLE | STRING | |
@@ -403,29 +406,22 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | InitiationDate | NULLABLE | TIMESTAMP | |
 | ArrestDate | NULLABLE | TIMESTAMP | |
 | CaseStatus | NULLABLE | STRING | |
-| DefendantName | NULLABLE | STRING | |
 | DefendantGender | NULLABLE | STRING | |
 | DefendantRace | NULLABLE | STRING | |
-| DefendantDOB | NULLABLE | DATE | |
 | DefendantZipCode | NULLABLE | INTEGER | 
 
 ### CPCMS_DiversionaryData
 
 | fullname | mode | type | description |
 | ---|---|---|---|
-| County | NULLABLE | STRING | |
-| DocketNumber | NULLABLE | STRING | |
 | OTN | NULLABLE | STRING | |
-| OriginatingDocketNumber | NULLABLE | STRING | |
-| FiledDate | NULLABLE | TIMESTAMP | |
-| InitiationDate | NULLABLE | TIMESTAMP | |
-| ArrestDate | NULLABLE | TIMESTAMP | |
-| CaseStatus | NULLABLE | STRING | |
-| DefendantName | NULLABLE | STRING | |
-| DefendantGender | NULLABLE | STRING | |
-| DefendantRace | NULLABLE | STRING | |
-| DefendantDOB | NULLABLE | DATE | |
-| DefendantZipCode | NULLABLE | INTEGER | 
+| OffenseSequenceNumber | NULLABLE | INTEGER | |
+| DiversionaryProgramType | NULLABLE | STRING | |
+| ProgramAdmissionDate | NULLABLE | TIMESTAMP | |
+| ProgramPeriodYears | NULLABLE | FLOAT | |
+| ProgramPeriodMonths | NULLABLE | FLOAT | |
+| ProgramPeriodDays | NULLABLE | FLOAT | |
+| ProgramStartDate | NULLABLE | TIMESTAMP || 
 
 ### CPCMS_DocketEntryData
 
@@ -469,6 +465,8 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | OffenseGrade | NULLABLE | STRING | 
 
 ### CPCMS_ParticipantConfinementData
+
+Note: This contains highly identifying data.  We should create a deidentified version.
 
 | fullname | mode | type | description|
 | ---|---|---|---|
@@ -548,6 +546,8 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 
 ### MDJS\_AttorneyData
 
+NOTE: This table has highly identifying data.  It should be shared with care.  Attorney data is public but these are human people's addresses.  Also, atty data can sometimes be subtly identifying of the defendant.
+
 | fullname | mode | type | description |
 | ---|---|---|---|
 | DocketNumber | NULLABLE | STRING | |
@@ -580,6 +580,8 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 
 ### MDJS\_BailPostData
 
+NOTE: This table has highly identifying data.  I believe that SuretyName is the name of the person posting bail.
+
 | fullname | mode | type | description |
 | ---|---|---|---|
 | DocketNumber | NULLABLE | STRING | |
@@ -594,6 +596,8 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | BailPostCreatedSystem | NULLABLE | STRING | 
 
 ### MDJS\_CalendarEventData
+
+Note: This has highly sensitive data and should not be shared or we should make a de-identified version of the data.
 
 | fullname | mode | type | description |
 | ---|---|---|---|
@@ -613,6 +617,8 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 ### MDJS\_CaseConfinementData
 
 ### MDJS\_CaseData
+
+NOTE: This table has highly identifying data.  It should generally not be shared but instead replaced with the de-identified version.
 
 | fullname | mode | type | description |
 | ---|---|---|---|
@@ -668,7 +674,7 @@ NOTE: This table has highly identifying data.  It should generally not be shared
 | NonMonetaryPaymentAmount | NULLABLE | FLOAT | |
 | PaymentAmount | NULLABLE | FLOAT | |
 | Balance | NULLABLE | FLOAT | |
-| 
+
 ### MDJS\_OffenseData
 
 | fullname | mode | type | description |
